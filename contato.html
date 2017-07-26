@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Gustavo Souza">
+	<title>SIMES - Projeto Integrador</title>
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/764px-Logotipo_IFET.svg.png">
+	<link rel="stylesheet" type="text/css" href="css/contato.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/Scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc7wL9pOgWSRc8wQ3R35raj7wkcGWPlHc&callback=myMap"></script>
+	<script>
+		var inputs = document.getElementByClass('.formulario-input');
+
+		for (var i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener('onkeyup', function(){
+		if (this.value.length>=1) {
+			this.nextElementSibling.classList.add('fixar');
+		}else{
+			this.nextElementSibling.classList.remove('fixar');
+		}
+	})
+}
+	</script>
+</head>
+<body onload="onYouTubeIframeAPIReady();playVideo();">
+	<div id="main">
+		<header class="container-fluid">
+			<div class="container">
+				<h1 id="titulo-head" class="text-center">SIMES</h1>
+				<h4 class="text-center">Sistema de Monitoramento de Entrada e Saída</h4>
+
+				<nav id="menu-topo">
+					<ul>
+						<li><a id="home" href="index.html">Home</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a id="equip" href="equipes.html">Equipes</a></li>
+						<li><a id="profs" href="professores.html">Professores</a></li>
+						<li><a id="cont" href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+
+				<div class="container-button-menu" onclick="myFunction(this); openNav();">
+				  <div class="bar1"></div>
+				  <div class="bar2"></div>
+				  <div class="bar3"></div>
+
+				  <span id="menu-name">MENU</span>
+				</div>
+
+				<div id="mySidenav" class="sidenav">
+				  <a href="#">About</a>
+				  <a href="#">Services</a>
+				  <a href="#">Clients</a>
+				  <a href="#">Contact</a>
+				</div>
+			</div>
+		</header>
+
+		<section id="contato" class="contato">
+			<div class="container-fluid cont">
+			</div>
+			<div id="form" class="center-block">
+				<form action="" class="formulario">
+
+					<h2 class="titulo-formulario">Contato</h2>
+
+					<input id="t1" type="text" class="formulario-input">
+					<label for="t1" class="formulario-label" >nome</label>
+
+					<input id="t2" type="text" class="formulario-input">
+					<label for="t2" class="formulario-label" >Sobrenome</label>
+
+					<input id="t3" type="text" class="formulario-input">
+					<label for="t3" class="formulario-label" >Email</label>
+
+					<textarea name="mensagem" placeholder="Escreva aqui sua mensagem"></textarea>
+
+					<input type="submit" value="Enviar" class="formulario-submit">
+				</form>
+			</div>
+		</section>
+
+		<footer>
+			<img id="logo-if" src="img/logo.png">
+		</footer>
+	</div>
+</body>
+</html>

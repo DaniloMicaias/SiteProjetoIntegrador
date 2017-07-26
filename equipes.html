@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Gustavo Souza">
+	<title>SIMES - Equipes</title>
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/764px-Logotipo_IFET.svg.png">
+	<link rel="stylesheet" type="text/css" href="css/equipes.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/Scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc7wL9pOgWSRc8wQ3R35raj7wkcGWPlHc&callback=myMap"></script>
+	<script>
+		var inputs = document.getElementByClass('.formulario-input');
+
+		for (var i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener('onkeyup', function(){
+		if (this.value.length>=1) {
+			this.nextElementSibling.classList.add('fixar');
+		}else{
+			this.nextElementSibling.classList.remove('fixar');
+		}
+	})
+}
+	</script>
+</head>
+<body">
+	<div id="main">
+		<header class="container-fluid">
+			<div class="container">
+				<h1 id="titulo-head" class="text-center">SIMES</h1>
+				<h4 class="text-center">Sistema de Monitoramento de Entrada e Saída</h4>
+
+				<nav id="menu-topo">
+					<ul>
+						<li><a id="home" href="index.html">Home</a></li>
+						<li><a id="sobre" href="sobre.html">Sobre</a></li>
+						<li><a id="equip" href="equipes.html">Equipes</a></li>
+						<li><a id="profs" href="professores.html">Professores</a></li>
+						<li><a id="cont" href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+
+				<div class="container-button-menu" onclick="myFunction(this); openNav();">
+				  <div class="bar1"></div>
+				  <div class="bar2"></div>
+				  <div class="bar3"></div>
+
+				  <span id="menu-name">MENU</span>
+				</div>
+
+				<div id="mySidenav" class="sidenav">
+				  <a href="#">About</a>
+				  <a href="#">Services</a>
+				  <a href="#">Clients</a>
+				  <a href="#">Contact</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="container-fluid nav-equipes">
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active"><a href="#p1" data-toggle="tab">Redes de Computadores</a></li>
+				<li><a href="#p2" data-toggle="tab">Manutenção</a></li>
+				<li><a href="#p3" data-toggle="tab">Eletrônica</a></li>
+				<li><a href="#p4" data-toggle="tab">Banco de Dados</a></li>
+				<li><a href="#p5" data-toggle="tab">Site</a></li>
+				<li><a href="#p6" data-toggle="tab">Manual</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="p1" class="tab-pane active">
+					OI
+				</div>				
+				<div id="p2" class="tab-pane">
+					OLA
+				</div>			
+				<div id="p3" class="tab-pane">
+					HELLO
+				</div>
+				<div id="p4" class="tab-pane">
+					ALOHA
+				</div>			
+				<div id="p5" class="tab-pane">
+					Origato
+				</div>		
+				<div id="p6" class="tab-pane">
+					HELLO WORD
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

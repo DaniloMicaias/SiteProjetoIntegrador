@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Grupo do site">
+	<title>SIMES - Projeto Integrador</title>
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logotipo_IFET.svg/764px-Logotipo_IFET.svg.png">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/Scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc7wL9pOgWSRc8wQ3R35raj7wkcGWPlHc&callback=myMap"></script>
+	<script>
+		var inputs = document.getElementByClass('.formulario-input');
+
+		for (var i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener('onkeyup', function(){
+		if (this.value.length>=1) {
+			this.nextElementSibling.classList.add('fixar');
+		}else{
+			this.nextElementSibling.classList.remove('fixar');
+		}
+	})
+}
+	</script>
+</head>
+
+	<div id="main">
+		<header class="container-fluid">
+			<div class="container">
+				<h1 id="titulo-head" class="text-center">SIMES</h1>
+				<h4 class="text-center">Sistema de Monitoramento de Entrada e Saída</h4>
+
+				<nav id="menu-topo">
+					<ul>
+						<li><a id="home" href="index.html">Home</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+						<li><a id="equip" href="equipes.html">Equipes</a></li>
+						<li><a id="profs" href="professores.html">Professores</a></li>
+						<li><a id="cont" href="#contato">Contato</a></li>
+					</ul>
+				</nav>
+
+				<div class="container-button-menu" onclick="myFunction(this); openNav();">
+				  <div class="bar1"></div>
+				  <div class="bar2"></div>
+				  <div class="bar3"></div>
+
+				  <span id="menu-name">MENU</span>
+				</div>
+
+				<div id="mySidenav" class="sidenav">
+				  <a href="#">About</a>
+				  <a href="#">Services</a>
+				  <a href="#">Clients</a>
+				  <a href="#">Contact</a>
+				</div>
+			</div>
+		</header>
+
+		<section class="main-section">
+			<div class="contenedor"> 
+				<div class="cubo">
+					<div class="cara">
+						<img src="img/if.png" width="195px" height="200px">
+					</div>
+					<div class="cara">
+						<img src="img/if.png" width="195px" height="200px">
+					</div>
+					<div class="cara">
+						<img src="img/if.png" width="195px" height="200px">
+					</div>
+					<div class="cara">
+						<img src="img/if.png" width="195px" height="200px">
+					</div>
+					<div class="cara">
+						<img src="img/if.png" width="195px" height="200px">
+					</div>
+					<div class="cara">
+						<img src="img/if.png" width="195px" height="200px">
+					</div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+					<div class="cara-fondo"></div>
+			</div><!-- Cubo giratório -->
+
+			<div class="container conteudo-main">
+				<h2 id="tit-main">Sistema de Monitoramento de Entrada e Saída</h2>
+				<h3 id="sub-main">Desenvolvimento de Projeto Integrador</h3>
+				<script>
+						function typeEffect(element, speed) {
+							var text = $(element).text();
+							$(element).html('');
+							
+							var i = 0;
+							var timer = setInterval(function() {
+											if (i < text.length) {
+												$(element).append(text.charAt(i));
+												i++;
+											} else {
+												clearInterval(timer);
+											}
+										}, speed);
+						}
+
+						$( document ).ready(function() {
+						  var speed = 50;
+						  var delay = $('#tit-main').text().length * speed + speed;
+						  typeEffect($('#tit-main'), speed);
+						  setTimeout(function(){
+						    $('#sub-main').css('display', 'inline-block');
+						    typeEffect($('#sub-main'), speed);
+						  }, delay);
+						});
+					</script>
+					
+			</div>	
+		</section>
+
+		<section class="sobre">
+			<div id="sobre" class="container">
+				<h2 id="tit-sobre" class="text-center">Sobre o Projeto</h2>
+				<p class="text-center center-block">O Projeto Integrador é uma atividade interdisciplinar, o seu foco principal é propiciar aos alunos um embasamento prático dos conceitos teóricos adquiridos através dos conteúdos programáticos ministrados em sala de aula em torno de uma atividade única.</p>
+				<div class="row infos-sobre">
+					<div class="col-md-4 squares">
+						<div id="circle1" style="-webkit-animation:colorchange 5s infinite alternate;" class="circle center-block" data-toggle="modal" data-target="#myModal1">
+							<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+						</div>
+						<h3 class="text-center ">Nome</h3>
+
+
+					<div class="modal fade" id="myModal1"  role="dialog">
+					  	<div class="modal-dialog">
+
+						    <div class="modal-content">
+
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        <h3 class="modal-title">Nome</h3>
+						      </div>
+						      <div class="modal-body">
+						        <p>SIMES: Sistema de Monitoramento de Entrada e Saída</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+
+						  </div>
+					</div>	
+
+
+					</div>
+					<div class="col-md-4 squares">
+						<div style="-webkit-animation:colorchange 5s infinite alternate;" class="circle center-block" data-toggle="modal" data-target="#myModal2">
+							<span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+						</div>
+						<h3 class="text-center">Tema</h3>
+
+						<div class="modal fade" id="myModal2" role="dialog">
+				  	<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Tema</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Monitorar a entrada de discentes, docentes e visitantes, para que possa haver maior segurança no ambiente acadêmico </p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>	
+
+					</div>
+					<div class="col-md-4 squares">
+						<div style="-webkit-animation:colorchange 5s infinite alternate;" class="circle center-block" data-toggle="modal" data-target="#myModal3">
+							<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+						</div>
+						<h3 class="text-center">Problemática</h3>
+						
+						<div id="myModal3" class="modal fade" role="dialog">
+				  	<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Problemática</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Como desenvolver um projeto como esse em um ambiente com entrada e saída de visitantes, quase que constante</p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>	
+
+					</div>
+					<div class="col-md-4 squares">
+						<div style="-webkit-animation:colorchange 5s infinite alternate;" class="circle center-block" data-toggle="modal" data-target="#myModal4">
+							<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+						</div>
+						<h3 class="text-center">Objetivos Gerais</h3>
+
+						<div id="myModal4" class="modal fade" role="dialog">
+				  	<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Objetivos Gerais</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>Elaborar um projeto integrador e interdisciplinar que proporcione a criação de um sistema que monitore a entrada e saída de discentes, docentes, servidores e visitantes no campus São Gonçalo do Amarante do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte</p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>	
+
+					</div>
+					<div class="col-md-4 squares">
+						<div style="-webkit-animation:colorchange 5s infinite alternate;" class="circle center-block" data-toggle="modal" data-target="#myModal5">
+							<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+						</div>
+						<h3 class="text-center">Objetivos Específicos</h3>
+
+						<div id="myModal5" class="modal fade" role="dialog">
+				  	<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Objetivos Específicos</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>• Possibilitar aos alunos a compreensão da dinâmica das atividades de uma empresa, por meio do entendimento dos processos;</p>
+
+				        <p>• Propiciar com que os alunos possam identificar com clareza a relação existente entre as disciplinas cursadas, além de promover cada vez mais a interação dos conteúdos apresentados;</p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>	
+
+					</div>
+					<div class="col-md-4 squares">
+						<div style="-webkit-animation:colorchange 5s infinite alternate;" class="circle center-block" data-toggle="modal" data-target="#myModal6">
+							<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+						</div>
+						<h3 class="text-center">Metodologia</h3>
+
+						<div id="myModal6" class="modal fade" role="dialog">
+				  	<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Metodologia</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>O trabalho assume a estrutura de um projeto de âmbito acadêmico, pautado em reuniões coletivas entre a turma de Informática do IFRN, dividindo-se o trabalho em subgrupos, de acordo com as áreas de conhecimento vislumbradas.
+							Os alunos, em parceria com os professores envolvidos na proposta, terão liberdade para desenvolver suas próprias metodologias a fim de atingir suas estabelecidas metas. </p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>	
+
+					</div>
+				</div>	
+			</div>
+		</section>
+
+		<div class="img-parallax">
+			<h2 id="tit-parallax" class="text-center">Possui interesse em adiquirir o projeto para a sua instituição?</h2>
+			<a href="#contato"><div id="contate" class="col-md-2 col-md-offset-5">Contate-nos<span style="margin-left: 10px;font-size: 25px;transition: transform 0.6s;" class="glyphicon glyphicon-envelope"></span></div></a>
+		</div>
+
+		<section class="cronograma">
+			<div class="container">
+				<div class="col-md-12">
+					<h1 id="tit-cronograma" class="text-center">Cronograma 2017</h1>
+					<ul id="tab-cronograma" class="nav nav-tabs">
+						<li class="active"><a href="#p1" data-toggle="tab">Julho</a></li>
+						<li><a href="#p2" data-toggle="tab">Junho</a></li>
+						<li><a href="#p3" data-toggle="tab">Maio</a></li>
+						<li><a href="#p4" data-toggle="tab">Abril</a></li>
+						<li><a href="#p5" data-toggle="tab">Março</a></li>
+						<li><a href="#p6" data-toggle="tab">Fevereiro</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div id="p1" class="tab-pane active">							
+							<div class="table-responsive">
+								<table class="table table-striped table-condensed table-responsive">
+									<thead>
+										<tr>
+											<th>Data</th>
+											<th>Atividade</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>05/07</td>
+											<td>Encontros ordinários com os docentes. Foi discutido o andamento das atividades do projeto 		integrador, como os professores estavam coordenando suas atividades com os GT`s dos alunos e a que ponto estava o andamento destas atividades.
+											</td>
+										</tr>
+										<tr>
+											<td>26/07</td>
+											<td>Último encontro ordinário com os alunos.</td>
+										</tr>
+										<tr>
+											<td>27/07</td>
+											<td>Socialização entre professores e alunos envolvidos no projeto.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+									
+						<div id="p2" class="tab-pane">
+							ola
+						</div>
+								
+						<div id="p3" class="tab-pane">
+							
+						</div>
+
+						<div id="p4" class="tab-pane">
+							
+						</div>
+								
+						<div id="p5" class="tab-pane">
+							
+						</div>
+
+						<div id="p6" class="tab-pane">
+							
+						</div>
+						<span id="span-calendar" class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="local container-fluid">
+			<div id="map" class="col-sm-5">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.467168322647!2d-35.340270985689074!3d-5.78949049580462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3acd1ab8efceb%3A0xf3f543d9d9653e23!2sIFRN+S%C3%A3o+Gon%C3%A7alo+do+Amarante!5e0!3m2!1spt-BR!2sbr!4v1500752595167" width="104%" height="450px" frameborder="0" style="border:0;margin: 0px -25px;pointer-events:none;" ></iframe>
+			</div>
+		</section>
+
+		<section id="contato" class="contato">
+			<div class="container-fluid cont">
+			</div>
+			<div id="form" class="center-block">
+				<form action="" class="formulario">
+
+					<h2 class="titulo-formulario">Contato</h2>
+
+					<input id="t1" type="text" class="formulario-input">
+					<label for="t1" class="formulario-label" >nome</label>
+
+					<input id="t2" type="text" class="formulario-input">
+					<label for="t2" class="formulario-label" >email</label>
+
+					<input id="t3" type="text" class="formulario-input">
+					<label for="t3" class="formulario-label" >Teste</label>
+
+					<textarea name="mensagem" placeholder="Escreva aqui sua mensagem"></textarea>
+
+					<input type="submit" value="Enviar" class="formulario-submit">
+
+				</form>
+			</div>
+		</section>
+
+		<footer>
+			<img id="logo-if" src="img/logo.png">
+		</footer>
+	</div>
+</body>
+</html>

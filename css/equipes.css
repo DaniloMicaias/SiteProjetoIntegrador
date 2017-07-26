@@ -1,0 +1,241 @@
+@CHARSET UTF-8;
+
+body, html {
+    background-color: #0370b0;
+}
+
+.container {
+    position: relative;
+}
+
+/* Estilizando o cabeçalho */
+header {
+	height: 80px;
+    width: 100%;
+    background-color: rgba(32, 38, 43,0.75);
+    box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,.2);
+    z-index: 2;
+}
+
+#titulo-head {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+	color: white;
+	letter-spacing: 20px;
+    font-size: 2em;
+}
+
+header h4 {
+    display: none;
+}
+
+/*
+header > h4 {
+	color: white;
+	letter-spacing: 5px;
+	font-size: 15px;
+}
+*/
+
+/* MENU TOPO */
+#menu-topo {
+    height: 100px;
+    width: 50%;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+
+#menu-topo ul li {
+    display: inline;
+    margin: 0px 0px;
+    padding: 11px 15px;
+    margin-right: -5px;
+}
+
+#menu-topo ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.6s;
+    overflow: hidden;
+}
+
+#menu-topo ul li:hover a:after {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    content: " ";
+    width: 50px;
+    height: 2px;
+    margin: 20px auto;
+    background-color: #1574c4;
+}
+
+#menu-topo ul li #equip:after {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    content: " ";
+    width: 65px;
+    height: 2px;
+    margin: 20px auto;
+    background-color: #1574c4;
+}
+
+#menu-topo ul li:hover #profs:after {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    content: " ";
+    width: 97px;
+    height: 2px;
+    margin: 20px auto;
+    background-color: #1574c4;
+}
+
+#menu-topo ul li:hover #cont:after {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    content: " ";
+    width: 63px;
+    height: 2px;
+    margin: 20px auto;
+    background-color: #1574c4;
+}
+
+/* MENU LATERAL*/
+.container-button-menu {
+    position: relative;
+    top: -70px;
+    left: -130px;
+    display: none;
+    cursor: pointer;
+    width: 175px;
+    height: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0,0,0,.4);
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    z-index: 0.1;
+}
+
+.container-button-menu:hover {
+	left: -20px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    margin-left: 10px;
+    transition: 0.4s;
+    position: relative;
+    left: 120px;
+}
+
+.bar1 {
+	margin-top: 12px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+span#menu-name {
+	position: absolute;
+	top: 8px;
+	left: 25px;
+	font-size: 25px;
+	letter-spacing: 4px;
+    color: white;
+}
+
+/* MENU ocultado */
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #f5f5f5; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.nav {
+    background-color: #333;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.tab-content {
+    height: 900px;
+    background-color: #0370b0;
+    border: 1px solid #333;
+}
